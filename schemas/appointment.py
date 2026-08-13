@@ -7,6 +7,7 @@ from pydantic import BaseModel, ConfigDict
 
 class AppointmentCreate(BaseModel):
     """Schema for creating an appointment."""
+
     patient_id: int
     doctor_id: int
     appointment_start: datetime

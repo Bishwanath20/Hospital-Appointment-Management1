@@ -5,6 +5,7 @@ from pydantic import BaseModel, ConfigDict
 
 class DoctorCreate(BaseModel):
     """Schema used to create a new `Doctor`."""
+
     name: str
     specialization: str | None = None
 
