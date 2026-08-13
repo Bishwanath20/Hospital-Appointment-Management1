@@ -1,0 +1,6 @@
+# Bandit configuration file
+# Exclude vendor, virtualenv, and migration template directories that
+# commonly contain constructs flagged by Bandit but are not application code.
+exclude_dirs:
+  - .venv
+  - alembic

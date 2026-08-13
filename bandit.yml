@@ -1,0 +1,19 @@
+exclude:
+  - .venv
+  - venv
+  - .git
+  - migrations
+  - alembic
+  - tests
+  - .pytest_cache
+targets:
+  - app
+  - models
+  - routers
+  - services
+  - main.py
+skips: []
+
+# Notes:
+# - This config tells Bandit to ignore the virtual environment and other non-project paths.
+# - CI should call: `bandit -r -c bandit.yml -f json -o bandit.json` to apply these settings.
