@@ -70,8 +70,7 @@ def main() -> int:
         ok("GET /patients")
         patient_list = r.json()
         if not isinstance(patient_list, list):
-            raise AssertionError("GET /patients should return a JSON list")
-
+            raise TypeError("GET /patients should return a JSON list")
         r = session.post(f"{base}/patients", json=patient, timeout=args.timeout)
         expect(r, (200, 201), "POST /patients")
         patient_id = get_id(r.json())
