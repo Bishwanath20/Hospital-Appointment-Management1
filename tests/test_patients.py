@@ -2,8 +2,8 @@
 
 from fastapi.testclient import TestClient
 
+from app.main import app
 from database import get_db
-from main import app
 
 
 def test_create_and_get_patient(db_session, monkeypatch):
